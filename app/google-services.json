@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "209314788817",
+    "firebase_url": "https://sportsmanagementapp.firebaseio.com",
+    "project_id": "sportsmanagementapp",
+    "storage_bucket": "sportsmanagementapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209314788817:android:84c65d44a5153548765cf0",
+        "android_client_info": {
+          "package_name": "com.example.smanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209314788817-3nq3dlefer710hlgu74qvkqjl8843up9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smanagement",
+            "certificate_hash": "2975e1c26c4efa1df599b0dc855edbfa466a42bb"
+          }
+        },
+        {
+          "client_id": "209314788817-e4g9ie9bo92gftsc3gh0ikegt41274ge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6uG2V5gSpgioyUY23xijzxb0J49SCJps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209314788817-e4g9ie9bo92gftsc3gh0ikegt41274ge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209314788817:android:a743790a769748ef765cf0",
+        "android_client_info": {
+          "package_name": "com.example.sportsmanagementapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209314788817-r4av5tgq8farvqqse3fiqf1h80il2foo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sportsmanagementapp",
+            "certificate_hash": "2975e1c26c4efa1df599b0dc855edbfa466a42bb"
+          }
+        },
+        {
+          "client_id": "209314788817-e4g9ie9bo92gftsc3gh0ikegt41274ge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6uG2V5gSpgioyUY23xijzxb0J49SCJps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209314788817-e4g9ie9bo92gftsc3gh0ikegt41274ge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

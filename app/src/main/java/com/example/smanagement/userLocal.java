@@ -33,7 +33,7 @@ public class userLocal
 
     }
 
-    public user getLoggedIn()
+    public void getLoggedIn()
     {
         //getting name
         String name = userLocalDatabase.getString("name", "");
@@ -43,8 +43,8 @@ public class userLocal
 
 
         //creating new user
-        user StoredUser = new user(name, age, username, password);
-        return StoredUser;
+        //user StoredUser = new user(name, age, username, password);
+       // return StoredUser;
 
     }
 

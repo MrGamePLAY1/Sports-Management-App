@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -27,6 +29,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         mAuth = FirebaseAuth.getInstance();
 
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_login);
 
         //setting the views
@@ -49,6 +52,23 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.loginButton:
+
+                String username = etUsername.getText().toString().trim();
+                String password = etPassword.getText().toString().trim();
+
+                //validate the data
+                if (username.isEmpty())
+                {
+                    Toast.makeText(login.this, "Username is required", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (password.isEmpty())
+                {
+                    Toast.makeText(login.this, "Password is required", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 break;
 
             case R.id.registerLink:

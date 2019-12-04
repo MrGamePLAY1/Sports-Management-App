@@ -2,47 +2,81 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:padding="15dp"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".login">
 
     <TextView
+        android:id="@+id/heading"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Sports Management "
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:textColor="#F3EEEE"
+        android:textSize="25sp"
+        app:fontFamily="sans-serif-condensed-light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
         android:text="Username"
-        android:layout_height="wrap_content"/>
+        android:textColor="#F1DA05"
+        android:textSize="24sp"
+        android:textStyle="italic" />
 
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content"/>
+        android:textColor="#FF9800"
+        android:textSize="22sp" />
 
     <TextView
         android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
         android:text="Password"
-        android:layout_height="wrap_content"/>
+        android:textColor="#F1DA05"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:inputType="textPassword"
-        android:layout_height="wrap_content"/>
+        android:textColor="#FF9800"
+        android:textSize="22sp" />
 
     <Button
         android:id="@+id/loginButton"
-        android:text="Login"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/registerLink"
         android:layout_width="wrap_content"
-        android:text="Register"
-        android:textStyle="bold"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"/>
+        android:layout_marginTop="25dp"
+        android:text="Register"
+        android:textColor="#FF9800"
+        android:textStyle="bold|italic" />
 
 </LinearLayout>

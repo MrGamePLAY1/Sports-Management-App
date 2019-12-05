@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -17,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class register extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,6 +29,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
     EditText etName, etUsername, etPassword, etAge;
     TextView loginLink;
     private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +65,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
 
     }
 
+
     @Override
     public void onClick(View v)
     {
@@ -82,6 +86,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
                 //int age = Integer.parseInt(etAge.getText().toString());
 
 
+
                 //validate the data
                 if (name.isEmpty())
                 {
@@ -89,15 +94,16 @@ public class register extends AppCompatActivity implements View.OnClickListener 
                     return;
                 }
 
-                if (username.isEmpty())
-                {
-                    Toast.makeText(register.this, "Username is required", Toast.LENGTH_SHORT).show();
-                    return;
-                }
 
                 if (ageText.isEmpty())
                 {
                     Toast.makeText(register.this, "Age is required", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (username.isEmpty())
+                {
+                    Toast.makeText(register.this, "Username is required", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

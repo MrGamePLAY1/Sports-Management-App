@@ -69,6 +69,12 @@ public class login extends AppCompatActivity implements View.OnClickListener {
                     return;
                 }
 
+                if(password.length() < 6)
+                {
+                    Toast.makeText(login.this, "You're password must be longer than 6 characters", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 break;
 
             case R.id.registerLink:

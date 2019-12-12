@@ -17,6 +17,16 @@
         android:background="#9dccf2" />
 
     <TextView
+        android:id="@+id/managerLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOG OUT"
+        android:textColor="#2231b5"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
         android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

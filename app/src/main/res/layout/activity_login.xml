@@ -66,6 +66,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         android:textColor="#000000"
         android:textStyle="bold" />
 

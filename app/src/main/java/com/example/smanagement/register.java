@@ -1,12 +1,11 @@
 package com.example.smanagement;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -18,12 +17,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class register extends AppCompatActivity implements View.OnClickListener {
 
-    //firebase instance
-
+public class register extends AppCompatActivity  {
 
     Button registerButton;
     EditText etName, etUsername, etPassword, etAge;
@@ -33,10 +29,8 @@ public class register extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_register);
-
+        super.onCreate(savedInstanceState);
 
         //firebase
         mAuth = FirebaseAuth.getInstance();
@@ -49,42 +43,24 @@ public class register extends AppCompatActivity implements View.OnClickListener 
         }
 
         //setting views
-        etName = (EditText) findViewById(R.id.etName);
-        etUsername = (EditText) findViewById(R.id.etUsername);
-        etPassword = (EditText) findViewById(R.id.etPassword);
-        etAge = (EditText) findViewById(R.id.etAge);
-        registerButton = (Button) findViewById(R.id.registerButton);
-        loginLink = (TextView) findViewById(R.id.loginLink);
+        etName = findViewById(R.id.etName);
+        etUsername =  findViewById(R.id.etUsername);
+        etPassword =  findViewById(R.id.etPassword);
+        etAge =  findViewById(R.id.etAge);
+        registerButton =  findViewById(R.id.registerButton);
+        loginLink =  findViewById(R.id.loginLink);
+
 
         //onClick
-        registerButton.setOnClickListener(this);
-        loginLink.setOnClickListener(this);
-
-
-
-
-    }
-
-
-    @Override
-    public void onClick(View v)
-    {
-        //gets view of id method, if login was notified do the following
-        switch (v.getId())
-        {
-            case R.id.registerButton:
-                //do something
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
                 //getting name, username, password, age
                 String name = etName.getText().toString().trim();
-                String username = etUsername.getText().toString().trim();
-                String password = etPassword.getText().toString().trim();
+                String username = etUsername.getText().toString().trim();   //email address
+                String password = etPassword.getText().toString().trim();   //password
                 String ageText = etAge.getText().toString();
-                int age = 0;
-
-                if(! TextUtils.isEmpty(ageText)) // If EditText is not empty
-                    age = Integer.parseInt(ageText); // parse its content to integer
-                //int age = Integer.parseInt(etAge.getText().toString());
-
 
 
                 //validate the data
@@ -109,35 +85,49 @@ public class register extends AppCompatActivity implements View.OnClickListener 
 
                 if (password.length() < 6 )
                 {
-                    Toast.makeText(register.this, "Need more than 6 characters", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(register.this, "Password needs more than 6 characters", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-
-            /*
-                //sending information to database
+                //Reg user to firebase
                 mAuth.createUserWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        //if task sucessful create user
                         if (task.isSuccessful())
                         {
-                            Toast.makeText(register.this, "User created!", Toast.LENGTH_SHORT).show();
-
-                            //sending to main activity (application dashboard)
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            Toast.makeText(register.this, "User Created!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(register.this, login.class));
                         }
 
                         else
                         {
-                            //Error for user if it can not be created
-                            Toast.makeText(register.this, "Error" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(register.this, "Error!" , Toast.LENGTH_SHORT).show();
                         }
                     }
-                }); */
+                });
 
-                //creating new user
-               // user newUser = new user(name, age, username, password);
+            }
+        });
+
+
+
+
+
+    }
+
+
+
+
+    /*@Override
+    public void onClick(View v)
+    {
+        //gets view of id method, if login was notified do the following
+        switch (v.getId())
+        {
+            case R.id.registerButton:
+                //do something
+
+
                 break;
 
             case R.id.loginLink:
@@ -145,5 +135,5 @@ public class register extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(this, login.class));
                 break;
         }
-    }
+    }*/
 }

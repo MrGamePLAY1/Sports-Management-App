@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
     //variables
@@ -25,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
         managerLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, login.class));
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(MainActivity.this, login.class)); //Go back to home page
+                    finish();
             }
         });
     }

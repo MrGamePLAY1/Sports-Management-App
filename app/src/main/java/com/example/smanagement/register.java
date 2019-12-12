@@ -109,31 +109,16 @@ public class register extends AppCompatActivity  {
             }
         });
 
+        loginLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(register.this, login.class));
+            }
+        });
 
 
 
 
     }
 
-
-
-
-    /*@Override
-    public void onClick(View v)
-    {
-        //gets view of id method, if login was notified do the following
-        switch (v.getId())
-        {
-            case R.id.registerButton:
-                //do something
-
-
-                break;
-
-            case R.id.loginLink:
-                //do something
-                startActivity(new Intent(this, login.class));
-                break;
-        }
-    }*/
 }

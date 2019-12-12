@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //setting views
-        managerLogout = findViewById(R.id.managerLogout);
+        managerLogout = findViewById(R.id.logout);
 
         managerLogout.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,7 +14,8 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="155dp"
-        android:background="#9dccf2" />
+        android:background="@drawable/topview"
+        />
 
 
     <TextView
@@ -70,7 +71,9 @@
         app:srcCompat="@drawable/avatar" />
 
 <!-- NEW TASK -->
+
     <!-- TASK BAR -->
+
     <View
         android:id="@+id/tasks"
         android:layout_width="match_parent"
@@ -78,7 +81,7 @@
         android:layout_marginTop="225dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="#9dccf2"
+        android:background="@drawable/roundedview"
         />
 
     <!-- TODAYS CLASS -->
@@ -171,7 +174,7 @@
         android:layout_marginTop="305dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="#9dccf2"
+        android:background="@drawable/roundedview"
         />
 
 
@@ -241,7 +244,7 @@
         android:layout_marginTop="385dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="#9dccf2"
+        android:background="@drawable/roundedview"
         />
 
 
@@ -313,12 +316,13 @@
         android:text="Log Out" />
 
     <!-- FOOTER -->
+
     <View
         android:id="@+id/footer"
         android:layout_width="match_parent"
-        android:layout_marginTop="515dp"
         android:layout_height="70dp"
-        android:background="#9dccf2" />
+        android:layout_marginTop="515dp"
+        android:background="@drawable/fadedgradient" />
 
     <Button
     android:id="@+id/homeBtn"
@@ -364,6 +368,4 @@
         android:layout_marginTop="522dp"
         android:background="@drawable/message"
         android:hapticFeedbackEnabled="true" />
-
-
 </RelativeLayout>

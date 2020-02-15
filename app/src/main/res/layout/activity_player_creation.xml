@@ -33,10 +33,12 @@
         android:layout_marginLeft="95dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
-        android:ems="4"
+        android:ems="16"
         android:hint="name"
         android:inputType="textPersonName"
-        android:textSize="12sp" />
+        android:textSize="14sp"
+        android:maxLength="20"
+        />
 
     <!-- EDITTEXT AGE -->
     <EditText
@@ -46,10 +48,12 @@
         android:layout_marginLeft="95dp"
         android:layout_marginTop="35dp"
         android:background="@android:color/transparent"
-        android:ems="4"
+        android:ems="8"
         android:hint="age"
-        android:inputType="textPersonName"
-        android:textSize="12sp" />
+        android:inputType="number"
+        android:textSize="14sp"
+        android:maxLength="2"
+        />
 
     <!-- EDITTEXT COUNTRY -->
     <EditText
@@ -59,10 +63,12 @@
         android:layout_marginLeft="95dp"
         android:layout_marginTop="50dp"
         android:background="@android:color/transparent"
-        android:ems="4"
+        android:ems="16"
         android:hint="country"
         android:inputType="textPersonName"
-        android:textSize="12sp" />
+        android:textSize="14sp"
+        android:maxLength="15"
+        />
 
     <!-- EDITTEXT DOB -->
     <EditText
@@ -72,10 +78,12 @@
         android:layout_marginLeft="95dp"
         android:layout_marginTop="65dp"
         android:background="@android:color/transparent"
-        android:ems="4"
-        android:hint="D.O.B"
+        android:ems="16"
+        android:hint="DD/MM/YY"
         android:inputType="textPersonName"
-        android:textSize="12sp" />
+        android:textSize="14sp"
+        android:maxLength="8"
+        />
 
     <!-- -->
     <!-- MAIN BODY COVER -->
@@ -97,6 +105,7 @@
         android:layout_marginTop="170dp"
         android:layout_marginLeft="40dp"
         android:text="Goals Scored"
+
         />
 
     <!-- Assists -->
@@ -176,7 +185,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="150dp"
-        android:ems="6"
+        android:ems="3"
+        android:inputType="number"
+        android:maxLength="4"
         />
 
     <!-- Edit Assists -->
@@ -186,7 +197,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="180dp"
-        android:ems="6"
+        android:ems="3"
+        android:inputType="number"
+        android:maxLength="4"
         />
 
     <!-- Edit Morale -->
@@ -196,7 +209,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="210dp"
-        android:ems="6"
+        android:ems="3"
+        android:inputType="text"
+        android:maxLength="5"
         />
 
     <!-- Edit injuries -->
@@ -206,7 +221,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="240dp"
-        android:ems="6"
+        android:ems="3"
+        android:inputType="number"
+        android:maxLength="3"
         />
 
     <!-- Edit Yellow Cards -->
@@ -216,7 +233,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="270dp"
-        android:ems="6"
+        android:ems="3"
+        android:inputType="number"
+        android:maxLength="4"
         />
 
     <!-- Edit Red Cards -->
@@ -226,7 +245,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="300dp"
-        android:ems="6"
+        android:ems="3"
+        android:inputType="number"
+        android:maxLength="4"
         />
 
     <!-- Edit Fitness Levels -->
@@ -236,7 +257,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="330dp"
-        android:ems="6"
+        android:ems="3"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:maxLength="10"
         />
 
     <!-- Edit Summary -->
@@ -246,7 +270,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="420dp"
-        android:ems="13"
+        android:ems="15"
+        android:inputType="text"
+        android:maxLength="30"
         />
 
     <!-- Delete Button-->

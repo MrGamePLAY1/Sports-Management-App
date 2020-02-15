@@ -33,7 +33,7 @@
         android:layout_marginLeft="95dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
-        android:ems="16"
+        android:ems="4"
         android:hint="name"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -48,7 +48,7 @@
         android:layout_marginLeft="95dp"
         android:layout_marginTop="35dp"
         android:background="@android:color/transparent"
-        android:ems="8"
+        android:ems="4"
         android:hint="age"
         android:inputType="number"
         android:textSize="14sp"
@@ -105,7 +105,6 @@
         android:layout_marginTop="170dp"
         android:layout_marginLeft="40dp"
         android:text="Goals Scored"
-
         />
 
     <!-- Assists -->
@@ -197,9 +196,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="180dp"
-        android:ems="3"
-        android:inputType="number"
-        android:maxLength="4"
+        android:ems="6"
         />
 
     <!-- Edit Morale -->
@@ -209,9 +206,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="210dp"
-        android:ems="3"
-        android:inputType="text"
-        android:maxLength="5"
+        android:ems="6"
         />
 
     <!-- Edit injuries -->
@@ -221,9 +216,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="240dp"
-        android:ems="3"
-        android:inputType="number"
-        android:maxLength="3"
+        android:ems="6"
         />
 
     <!-- Edit Yellow Cards -->
@@ -233,9 +226,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="270dp"
-        android:ems="3"
-        android:inputType="number"
-        android:maxLength="4"
+        android:ems="6"
         />
 
     <!-- Edit Red Cards -->
@@ -245,9 +236,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="300dp"
-        android:ems="3"
-        android:inputType="number"
-        android:maxLength="4"
+        android:ems="6"
         />
 
     <!-- Edit Fitness Levels -->
@@ -257,10 +246,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="330dp"
-        android:ems="3"
-        android:inputType="text"
-        android:textSize="14sp"
-        android:maxLength="10"
+        android:ems="6"
         />
 
     <!-- Edit Summary -->
@@ -270,9 +256,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="420dp"
-        android:ems="15"
-        android:inputType="text"
-        android:maxLength="30"
+        android:ems="13"
         />
 
     <!-- Delete Button-->

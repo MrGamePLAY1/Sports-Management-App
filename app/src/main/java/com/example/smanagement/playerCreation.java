@@ -3,11 +3,16 @@ package com.example.smanagement;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class playerCreation extends AppCompatActivity {
 
@@ -18,9 +23,15 @@ public class playerCreation extends AppCompatActivity {
 
     Button  saveBtn, deleteBtn;
 
+    FirebaseDatabase db = FirebaseDatabase.getInstance();
+    DatabaseReference myRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        myRef = db.getReference("Data");
+
+
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_player_creation);
@@ -61,10 +72,14 @@ public class playerCreation extends AppCompatActivity {
                 String summary = editSummary.getText().toString().trim();
 
 
+                //send off addName()
+                addName();
+
+
                 //Validation of the information
                 if (name.isEmpty())
                 {
-                    Toast.makeText(playerCreation.this, "Please enter a Name", Toast.LENGTH_SHORT).show();;
+                    Toast.makeText(playerCreation.this, "Please enter a Name", Toast.LENGTH_SHORT).show();
                 }
 
                 if (age.isEmpty())
@@ -121,7 +136,30 @@ public class playerCreation extends AppCompatActivity {
                 {
                     Toast.makeText(playerCreation.this, "Please add a summary", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
     }
+
+    public void addName()
+    {
+        String id = myRef.push().getKey();
+        String name = editName.getText().toString().trim();
+        String age = editAge.getText().toString().trim();
+
+        if(!TextUtils.isEmpty(name))
+        {
+           //new object of player
+           Player player = new Player(id, name, age);
+
+           myRef.child(id).setValue(player);
+
+           Toast.makeText(this, "Player added", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(this, "Please enter some Player", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

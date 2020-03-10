@@ -63,7 +63,7 @@ public class register extends AppCompatActivity  {
                 String ageText = etAge.getText().toString();
 
 
-                //validate the data
+                //validate the Player
                 if (name.isEmpty())
                 {
                     Toast.makeText(register.this, "Name is required", Toast.LENGTH_SHORT).show();

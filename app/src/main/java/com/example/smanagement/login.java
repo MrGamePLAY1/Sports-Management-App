@@ -62,9 +62,6 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                //getting username, password
-                String username = etUsername.getText().toString().trim();   //email address
-                String password = etPassword.getText().toString().trim();   //password
 
                 validation(etUsername.getText().toString(), etPassword.getText().toString());
 
@@ -83,11 +80,11 @@ public class login extends AppCompatActivity {
     }
 
 
-
+    //cretaed when you enter details
     private void validation(String loginUser, String loginPass)
     {
 
-        //validate the data
+        //validate the Player
         if (loginUser.isEmpty())
         {
             Toast.makeText(login.this, "Username is required", Toast.LENGTH_SHORT).show();

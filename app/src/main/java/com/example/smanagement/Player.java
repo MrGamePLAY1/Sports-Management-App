@@ -2,21 +2,23 @@ package com.example.smanagement;
 
 public class Player
 {
-    String id;
-    String name;
-    String age;
+    private String id;
+    private String name;
+    private String age;
 
-    //empty constructor
-    public Player(String id, String name, String age) {
+
+    public Player()
+    {
+        //empty constructor
     }
 
-    public String getId() {
-        return id;
+
+    //constructor
+    public Player(String name, String age) {
+        this.name = name;
+        this.age = age;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

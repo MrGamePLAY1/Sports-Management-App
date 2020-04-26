@@ -143,14 +143,15 @@ public class playerCreation extends AppCompatActivity {
 
     public void addName()
     {
-        String id = myRef.push().getKey();
         String name = editName.getText().toString().trim();
         String age = editAge.getText().toString().trim();
 
         if(!TextUtils.isEmpty(name))
         {
+            String id = myRef.push().getKey();
+
            //new object of player
-           Player player = new Player(id, name, age);
+           Player player = new Player(name, age);
 
            myRef.child(id).setValue(player);
 

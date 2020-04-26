@@ -2,6 +2,7 @@ package com.example.smanagement;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
@@ -21,10 +22,12 @@ public class playerCreation extends AppCompatActivity {
              editAssists, editMorale, editInjuries, editYCards,
              editRCards, editFitness, editSummary;
 
-    Button  saveBtn, deleteBtn;
+    Button  saveBtn, deleteBtn, homeBtn, statsBtn;
 
     FirebaseDatabase db = FirebaseDatabase.getInstance();
     DatabaseReference myRef;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -51,6 +54,8 @@ public class playerCreation extends AppCompatActivity {
         editSummary = findViewById(R.id.editSummary);
         saveBtn = findViewById(R.id.saveBtn);
         deleteBtn = findViewById(R.id.deleteBtn);
+        homeBtn = findViewById(R.id.homeBtn);
+        statsBtn = findViewById(R.id.statsBtn);
 
         //setting onClick event for "DELETE" button
         deleteBtn.setOnClickListener(new View.OnClickListener()
@@ -61,6 +66,23 @@ public class playerCreation extends AppCompatActivity {
             {
                 //clear the fields
                 clearfields();
+            }
+        });
+
+        //send to homepage (Manager)
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(playerCreation.this, MainActivity.class));
+            }
+        });
+
+        //send to creation of player
+        statsBtn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(playerCreation.this, playerCreation.class));
             }
         });
 
@@ -153,6 +175,8 @@ public class playerCreation extends AppCompatActivity {
         });
     }
 
+
+
     public void clearfields()
     {
         //reset the fields
@@ -169,6 +193,7 @@ public class playerCreation extends AppCompatActivity {
         editFitness.setText("");
         editSummary.setText("");
     }
+
 
     public void addName()
     {
@@ -203,5 +228,6 @@ public class playerCreation extends AppCompatActivity {
             Toast.makeText(this, "Please enter some Player", Toast.LENGTH_SHORT).show();
         }
     }
+
 
 }

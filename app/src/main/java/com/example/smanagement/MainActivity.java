@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //send to homepage (Manager)
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MainActivity.class));
+            }
+        });
+
         //send to creation of player
         statsBtn.setOnClickListener(new View.OnClickListener()
         {

@@ -1,282 +1,335 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".playerCreation">
+    android:background="#FFFF">
 
-    <!-- BLUE COVER -->
-    <View
-        android:id="@+id/topcover"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:background="@drawable/darkblue" />
+        android:layout_height="match_parent">
 
-    <!-- AVATAR -->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="72dp"
-        android:layout_height="64dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/avatar"
-        android:layout_marginStart="20dp"
-        android:contentDescription="@string/todo" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/darkblue"
+            android:layout_height="wrap_content">
 
+            <!-- AVATAR -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/avatar"
+                android:layout_marginStart="5dp" />
 
-    <!-- EDITTEXT NAME -->
-    <EditText
-        android:id="@+id/editName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/transparent"
-        android:ems="4"
-        android:hint="name"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        android:maxLength="20"
-        />
+            <!-- EDITTEXT NAME -->
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:ems="4"
+                android:hint="name"
+                android:inputType="textPersonName"
+                android:textSize="12dp"
+                android:maxLength="20"
+                />
 
-    <!-- EDITTEXT AGE -->
-    <EditText
-        android:id="@+id/editAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="35dp"
-        android:background="@android:color/transparent"
-        android:ems="4"
-        android:hint="age"
-        android:inputType="number"
-        android:textSize="14sp"
-        android:maxLength="2"
-        />
+            <!-- EDITTEXT AGE -->
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="35dp"
+                android:background="@android:color/transparent"
+                android:ems="4"
+                android:hint="age"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:maxLength="2"
+                />
 
-    <!-- EDITTEXT COUNTRY -->
-    <EditText
-        android:id="@+id/editCountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="50dp"
-        android:background="@android:color/transparent"
-        android:ems="16"
-        android:hint="country"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        android:maxLength="15"
-        />
+            <!-- EDITTEXT COUNTRY -->
+            <EditText
+                android:id="@+id/editCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="55dp"
+                android:background="@android:color/transparent"
+                android:ems="16"
+                android:hint="country"
+                android:inputType="textPersonName"
+                android:textSize="12dp"
+                android:maxLength="15"
+                />
 
-    <!-- EDITTEXT DOB -->
-    <EditText
-        android:id="@+id/editDOB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="65dp"
-        android:background="@android:color/transparent"
-        android:ems="16"
-        android:hint="DD/MM/YY"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        android:maxLength="8"
-        />
+            <!-- EDITTEXT DOB -->
+            <EditText
+                android:id="@+id/editDOB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="75dp"
+                android:background="@android:color/transparent"
+                android:ems="16"
+                android:hint="DD/MM/YY"
+                android:inputType="textPersonName"
+                android:textSize="12dp"
+                android:maxLength="8"
+                />
+        </RelativeLayout>
 
-    <!-- -->
-    <!-- MAIN BODY COVER -->
-    <View
-        android:id="@+id/mainBody"
-        android:layout_width="match_parent"
-        android:layout_height="390dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/mainbodyplayerceation" />
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/mainbodyplayerceation">
 
+            <GridLayout
+                android:columnCount="2"
+                android:rowCount="8"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <!-- Goals Scored -->
-    <TextView
-        android:id="@+id/goalsScored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
-        android:layout_marginLeft="40dp"
-        android:text="Goals Scored"
-        />
+                <!-- Goals Scored -->
+                <TextView
+                    android:id="@+id/goalsScored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Goals Scored"
+                    android:textSize="12dp"/>
+                <!-- Edit Goals -->
+                <EditText
+                    android:id="@+id/editGoals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="3"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textSize="12dp"/>
 
-    <!-- Assists -->
-    <TextView
-        android:id="@+id/assists"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="40dp"
-        android:text="Assists"
-        />
-
-    <!-- Morale -->
-    <TextView
-        android:id="@+id/morale"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="230dp"
-        android:layout_marginLeft="40dp"
-        android:text="Morale"
-        />
-
-    <!-- Morale -->
-    <TextView
-        android:id="@+id/injuries"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
-        android:layout_marginLeft="40dp"
-        android:text="Injuries"
-        />
-
-    <!-- Yellow Cards -->
-    <TextView
-        android:id="@+id/yellowcards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
-        android:layout_marginLeft="40dp"
-        android:text="Yellow Cards"
-        />
-
-    <!-- Red Cards -->
-    <TextView
-        android:id="@+id/redcards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
-        android:layout_marginLeft="40dp"
-        android:text="Red Cards"
-        />
-
-    <!-- Fitness Levels -->
-    <TextView
-        android:id="@+id/fitnesslevels"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="40dp"
-        android:text="Fitness Level"
-        />
-
-    <!-- Bio -->
-    <TextView
-        android:id="@+id/summary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="40dp"
-        android:text="Summary"
-        />
-
-    <!-- Edit Goals -->
-    <EditText
-        android:id="@+id/editGoals"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="195dp"
-        android:layout_marginTop="150dp"
-        android:ems="3"
-        android:inputType="number"
-        android:maxLength="4"
-        />
-
-    <!-- Edit Assists -->
-    <EditText
-        android:id="@+id/editAssists"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="195dp"
-        android:layout_marginTop="180dp"
-        android:ems="6"
-        />
-
-    <!-- Edit Morale -->
-    <EditText
-        android:id="@+id/editMorale"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="195dp"
-        android:layout_marginTop="210dp"
-        android:ems="6"
-        />
-
-    <!-- Edit injuries -->
-    <EditText
-        android:id="@+id/editInjuries"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="195dp"
-        android:layout_marginTop="240dp"
-        android:ems="6"
-        />
-
-    <!-- Edit Yellow Cards -->
-    <EditText
-        android:id="@+id/editYCards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="195dp"
-        android:layout_marginTop="270dp"
-        android:ems="6"
-        />
-
-    <!-- Edit Red Cards -->
-    <EditText
-        android:id="@+id/editRCards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="195dp"
-        android:layout_marginTop="300dp"
-        android:ems="6"
-        />
-
-    <!-- Edit Fitness Levels -->
-    <EditText
-        android:id="@+id/editFitness"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="195dp"
-        android:layout_marginTop="330dp"
-        android:ems="6"
-        />
-
-    <!-- Edit Summary -->
-    <EditText
-        android:id="@+id/editSummary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="420dp"
-        android:ems="13"
-        />
-
-    <!-- Delete Button-->
-    <Button
-        android:id="@+id/deleteBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="490dp"
-        android:text="Delete" />
-
-    <!-- Save Button-->
-    <Button
-        android:id="@+id/saveBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="490dp"
-        android:text="Save" />
+                <!-- Assists -->
+                <TextView
+                    android:id="@+id/assists"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Assists"
+                    android:textSize="12dp"/>
+                <!-- Edit Assists -->
+                <EditText
+                    android:id="@+id/editAssists"
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="6"
+                    android:textSize="12dp" />
 
 
+                <!-- Morale -->
+                <TextView
+                    android:id="@+id/morale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Morale"
+                    android:textSize="12dp"
+                    />
+                <!-- Edit Morale -->
+                <EditText
+                    android:id="@+id/editMorale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="6"
+                    android:textSize="12dp"/>
 
-</RelativeLayout>
+
+                <!-- Morale -->
+                <TextView
+                    android:id="@+id/injuries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Injuries"
+                    android:textSize="12dp"
+                    />
+                <!-- Edit injuries -->
+                <EditText
+                    android:id="@+id/editInjuries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="6"
+                    android:textSize="12dp"/>
+
+
+                <!-- Yellow Cards -->
+                <TextView
+                    android:id="@+id/yellowcards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Yellow Cards"
+                    android:textSize="12dp"
+                    />
+                <!-- Edit Yellow Cards -->
+                <EditText
+                    android:id="@+id/editYCards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="6"
+                    android:textSize="12dp"/>
+
+                <!-- Red Cards -->
+                <TextView
+                    android:id="@+id/redcards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Red Cards"
+                    android:textSize="12dp"
+                    />
+                <!-- Edit Red Cards -->
+                <EditText
+                    android:id="@+id/editRCards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="6"
+                    android:textSize="12dp"
+                    android:autofillHints="" />
+
+                <!-- Fitness Levels -->
+                <TextView
+                    android:id="@+id/fitnesslevels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Fitness Level"
+                    android:textSize="12dp"
+                    />
+                <!-- Edit Red Cards -->
+                <EditText
+                    android:id="@+id/editFitness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="6"
+                    android:textSize="12dp"/>
+
+                <!-- Bio -->
+                <TextView
+                    android:id="@+id/summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Summary"
+                    android:textSize="12dp"
+                    />
+                <!-- Edit Summary -->
+                <EditText
+                    android:id="@+id/editSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ems="10"
+                    android:textSize="12dp"/>
+
+                <!-- Delete Button-->
+                <Button
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="45dp"
+                    android:text="Delete"
+                    android:textSize="12dp" />
+
+                <!-- Save Button-->
+                <Button
+                    android:id="@+id/saveBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="45dp"
+                    android:text="Save" />
+            </GridLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/fadedgradient">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="5"
+                android:rowCount="1">
+
+                <Button
+                    android:id="@+id/homeBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/home"
+                    android:hapticFeedbackEnabled="true" />
+
+                <Button
+                    android:id="@+id/statsBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/stats"
+                    android:hapticFeedbackEnabled="true" />
+
+                <Button
+                    android:id="@+id/checklistBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/checklist"
+                    android:hapticFeedbackEnabled="true" />
+
+                <Button
+                    android:id="@+id/calenderBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/calender"
+                    android:hapticFeedbackEnabled="true" />
+
+                <Button
+                    android:id="@+id/messagingBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/message"
+                    android:hapticFeedbackEnabled="true" />
+            </GridLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

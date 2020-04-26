@@ -29,7 +29,7 @@ public class playerCreation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        myRef = db.getReference("Data");
+        myRef = db.getReference("Player Information");
 
 
         super.onCreate(savedInstanceState);
@@ -51,6 +51,18 @@ public class playerCreation extends AppCompatActivity {
         editSummary = findViewById(R.id.editSummary);
         saveBtn = findViewById(R.id.saveBtn);
         deleteBtn = findViewById(R.id.deleteBtn);
+
+        //setting onClick event for "DELETE" button
+        deleteBtn.setOnClickListener(new View.OnClickListener()
+        {
+
+            @Override
+            public void onClick(View v)
+            {
+                //clear the fields
+                clearfields();
+            }
+        });
 
         //setting onClick event for "SAVE" button
         saveBtn.setOnClickListener(new View.OnClickListener() {
@@ -141,21 +153,50 @@ public class playerCreation extends AppCompatActivity {
         });
     }
 
+    public void clearfields()
+    {
+        //reset the fields
+        editName.setText("");
+        editAge.setText("");
+        editCountry.setText("");
+        editDOB.setText("");
+        editGoals.setText("");
+        editAssists.setText("");
+        editMorale.setText("");
+        editInjuries.setText("");
+        editRCards.setText("");
+        editYCards.setText("");
+        editFitness.setText("");
+        editSummary.setText("");
+    }
+
     public void addName()
     {
         String name = editName.getText().toString().trim();
         String age = editAge.getText().toString().trim();
+        String country = editCountry.getText().toString().trim();
+        String dob = editDOB.getText().toString().trim();
+        String goals = editGoals.getText().toString().trim();
+        String assists = editAssists.getText().toString().trim();
+        String morale = editMorale.getText().toString().trim();
+        String injuries = editInjuries.getText().toString().trim();
+        String rCards = editRCards.getText().toString().trim();
+        String yCards = editYCards.getText().toString().trim();
+        String fitness = editFitness.getText().toString().trim();
+        String summary = editSummary.getText().toString().trim();
+
 
         if(!TextUtils.isEmpty(name))
         {
             String id = myRef.push().getKey();
 
            //new object of player
-           Player player = new Player(name, age);
+           Player player = new Player(name, age, country, dob, goals, assists, morale, injuries, rCards, yCards, fitness, summary);
 
            myRef.child(id).setValue(player);
 
-           Toast.makeText(this, "Player added", Toast.LENGTH_LONG).show();
+
+           Toast.makeText(this, "Information sent by wizards to the database!", Toast.LENGTH_LONG).show();
         }
         else
         {

@@ -10,8 +10,11 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -24,15 +27,18 @@ public class playerCreation extends AppCompatActivity {
 
     Button  saveBtn, deleteBtn, homeBtn, statsBtn;
 
+    TextView managerLogout;
+
     FirebaseDatabase db = FirebaseDatabase.getInstance();
     DatabaseReference myRef;
+
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        myRef = db.getReference("Player Information");
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
 
 
         super.onCreate(savedInstanceState);
@@ -57,6 +63,8 @@ public class playerCreation extends AppCompatActivity {
         homeBtn = findViewById(R.id.homeBtn);
         statsBtn = findViewById(R.id.statsBtn);
 
+        managerLogout = findViewById(R.id.logout);
+
         //setting onClick event for "DELETE" button
         deleteBtn.setOnClickListener(new View.OnClickListener()
         {
@@ -66,6 +74,15 @@ public class playerCreation extends AppCompatActivity {
             {
                 //clear the fields
                 clearfields();
+            }
+        });
+
+        managerLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(playerCreation.this, playerCreation.class)); //Go back to home page
+                finish();
             }
         });
 
@@ -213,12 +230,15 @@ public class playerCreation extends AppCompatActivity {
 
         if(!TextUtils.isEmpty(name))
         {
+            myRef = db.getReference("Information");
             String id = myRef.push().getKey();
+            //  getting the user logged in UID
+            String manager = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
            //new object of player
            Player player = new Player(name, age, country, dob, goals, assists, morale, injuries, rCards, yCards, fitness, summary);
 
-           myRef.child(id).setValue(player);
+           myRef.child(manager).child(id).setValue(player);
 
 
            Toast.makeText(this, "Information sent by wizards to the database!", Toast.LENGTH_LONG).show();

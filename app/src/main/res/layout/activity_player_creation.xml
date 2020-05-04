@@ -271,6 +271,16 @@
                     android:layout_marginTop="45dp"
                     android:text="Save" />
             </GridLayout>
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="305dp"
+                android:text="Log Out" />
         </RelativeLayout>
 
         <RelativeLayout

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     TextView managerLogout;
 
     //buttons (navbar)
-    Button homeBtn, statsBtn, checklistBtn, calenderBtn, messagingBtn;
+    Button homeBtn, statsBtn, checklistBtn, calenderBtn, messagingBtn, viewDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +31,21 @@ public class MainActivity extends AppCompatActivity {
         calenderBtn = findViewById(R.id.calenderBtn);
         messagingBtn = findViewById(R.id.messagingBtn);
 
+        viewDB = findViewById(R.id.viewdb);
+
         managerLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                     FirebaseAuth.getInstance().signOut();
                     startActivity(new Intent(MainActivity.this, login.class)); //Go back to home page
                     finish();
+            }
+        });
+
+        viewDB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, match.class));
             }
         });
 

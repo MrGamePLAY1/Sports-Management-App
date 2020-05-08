@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         viewDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, match.class));
+                startActivity(new Intent(MainActivity.this, Match.class));
             }
         });
 

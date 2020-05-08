@@ -252,14 +252,36 @@
                     android:ems="10"
                     android:textSize="12dp"/>
 
+
+            </GridLayout>
+            <GridLayout
+                android:columnCount="3"
+                android:rowCount="1"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp">
+
+
                 <!-- Delete Button-->
                 <Button
                     android:id="@+id/deleteBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="37dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="45dp"
                     android:text="Delete"
+                    android:textSize="12dp" />
+
+                <!-- Delete Button-->
+                <Button
+                    android:id="@+id/datab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="45dp"
+                    android:text="Database"
                     android:textSize="12dp" />
 
                 <!-- Save Button-->
@@ -267,20 +289,17 @@
                     android:id="@+id/saveBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="37dp"
-                    android:layout_marginLeft="120dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="45dp"
-                    android:text="Save" />
+                    android:text="Save"
+                    android:textSize="12dp"/>
+
+
             </GridLayout>
 
-            <TextView
-                android:id="@+id/logout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
-                android:textSize="10dp"
-                android:textStyle="bold"
-                android:layout_marginTop="305dp"
-                android:text="Log Out" />
+
+
+
         </RelativeLayout>
 
         <RelativeLayout
